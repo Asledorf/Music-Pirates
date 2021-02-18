@@ -19,9 +19,9 @@ namespace Music_Pirates.Models
         public string Key { get; set; }
         public eSite Site { get; set; }
         
-        pubic void GetPlaybackInfo()
+        /*pubic void GetPlaybackInfo()
         {
 
-        }
+        }*/
     }
 }
