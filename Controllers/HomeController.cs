@@ -13,16 +13,26 @@ namespace Music_Pirates.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Browse()
         {
-            ViewBag.Message = "Your application description page.";
+            //new view 
+            ViewBag.Message = "Music will be found here. :)";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Profile()
         {
-            ViewBag.Message = "Your contact page.";
+            //previously called About
+            ViewBag.Message = "its YOU :O";
+
+            return View();
+        }
+
+        public ActionResult Playlists()
+        {
+            //previously called Contact
+            ViewBag.Message = "this is where playlists will live";
 
             return View();
         }
