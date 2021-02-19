@@ -37,6 +37,10 @@ body {
     font-weight: 700;
 }
 
+footer{
+    font-family: 'Comic Sans MS';
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
