@@ -34,7 +34,9 @@ namespace Music_Pirates.Models
         public string Album { get; set; }
         public string Artist { get; set; }
         public eGenre Genre { get; set; }
-        public bool Liked { get; set { if (Disliked) Disliked = false; } }
-        public bool Disliked { get; set { if (Liked) Liked = false; } }
+        private bool liked = false;
+        public bool Liked { get{ return liked; } set { liked = !liked; if (disliked) disliked = false; } }
+        private bool disliked = false;
+        public bool Disliked { get{ return disliked; } set { disliked = !disliked; if (liked) liked = false; } }
     }
 }
