@@ -21,10 +21,10 @@ namespace Music_Pirates.Controllers
             return View();
         }
 
-        public ActionResult Profile()
+        public ActionResult MyProfile()
         {
             //previously called About
-            ViewBag.Message = "its YOU :O";
+            ViewBag.Message = "it me :O";
 
             return View();
         }
