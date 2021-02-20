@@ -16,12 +16,13 @@ namespace Music_Pirates.Models
             Pandora
         }
 
+        public Guid ID { get; set; }
         public string Key { get; set; }
         public eSite Site { get; set; }
         
-        /*pubic void GetPlaybackInfo()
+        public void GetPlaybackInfo()
         {
 
-        }*/
+        }
     }
 }

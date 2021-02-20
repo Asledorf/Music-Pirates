@@ -30,8 +30,10 @@ namespace Music_Pirates.Models
             Dubstep
         }
 
+        public Guid ID { get; set; }
         public string Title { get; set; }
-        public string Album { get; set; }
+        public string AlbumTitle { get; set; }
+        public string AlbumCoverURL { get; set; }
         public string Artist { get; set; }
         public eGenre Genre { get; set; }
         private bool liked = false;
