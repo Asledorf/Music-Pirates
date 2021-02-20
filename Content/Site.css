@@ -23,6 +23,12 @@ h1 {
     box-shadow: 5px 5px 2px #C8B394;
 }
 
+h4 {
+    /*formatting*/
+    text-align: center;
+    font-weight: 800;
+}
+
 body {
     /*colors*/
     background-color: #EAD5B6;
