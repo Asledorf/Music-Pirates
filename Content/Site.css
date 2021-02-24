@@ -1,7 +1,7 @@
 ﻿html {
     /*colors*/
     background-color: #EAD5B6;
-    color: #154B67;
+    color: #3E301C;
     /*formatting*/
     font-family: Papyrus;
 }
@@ -23,17 +23,12 @@ h1 {
     box-shadow: 5px 5px 2px #C8B394;
 }
 
-h4 {
+h2, h3, h4, h5, h6 {
     /*formatting*/
     font-weight: 800;
 }
 
-h6 {
-    /*formatting*/
-    font-weight: 800;
-}
-
-#nav ol li:hover {
+.nav ul li:hover {
     background-color: #FCF7D8;
     color: #784E1f;
 }
@@ -41,7 +36,7 @@ h6 {
 body {
     /*colors*/
     background-color: #EAD5B6;
-    color: #154B67;
+    color: #3E301C;
     /*formatting*/
     height: auto;
     width: auto;
@@ -53,6 +48,7 @@ body {
 }
 
 footer{
+    color: #3E301C;
     font-family: 'Comic Sans MS';
     font-weight: 100;
 }
