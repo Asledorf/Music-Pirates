@@ -15,7 +15,7 @@ namespace Music_Pirates.Controllers
         }
 
         // GET: User/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(Guid id)
         {
             return View();
         }
@@ -43,14 +43,14 @@ namespace Music_Pirates.Controllers
         }
 
         // GET: User/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(Guid id)
         {
             return View();
         }
 
         // POST: User/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Guid id, FormCollection collection)
         {
             try
             {
@@ -65,14 +65,14 @@ namespace Music_Pirates.Controllers
         }
 
         // GET: User/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(Guid id)
         {
             return View();
         }
 
         // POST: User/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(Guid id, FormCollection collection)
         {
             try
             {

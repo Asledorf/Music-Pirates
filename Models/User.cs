@@ -13,11 +13,12 @@ namespace Music_Pirates.Models
         public string Username { get; set; }
         public string Password { get; set; } //Will likely need to setup some security stuffs later
         public DateTime Birthday { get; set; }
+        
+        public List<Playlist> Playlists = new List<Playlist>();
 
-        protected List<User> Following = new List<User>();
-        protected List<User> Followers = new List<User>();
-        protected List<Playlist> Playlists = new List<Playlist>();
-        protected List<Song> Liked = new List<Song>();
-        protected List<Song> Disliked = new List<Song>();
+        public List<User> Following = new List<User>();
+        public List<User> Followers = new List<User>();
+        public List<Song> Liked = new List<Song>();
+        public List<Song> Disliked = new List<Song>();
     }
 }
