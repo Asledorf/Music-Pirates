@@ -92,3 +92,10 @@ select,
 textarea {
     max-width: 280px;
 }
+.thumbnail,
+.img-thumbnail !important{
+    -webkit-box-shadow: 0 1px 2px #3E301C !important;
+    box-shadow: 0 1px 2px #3E301C !important;
+
+}
+
