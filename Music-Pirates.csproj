@@ -152,11 +152,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+<<<<<<< Updated upstream
     <Content Include="Images\instrumental.png" />
     <Content Include="Images\rap-hiphop.png" />
     <Content Include="Images\spotify.png" />
     <Content Include="Images\tophits.png" />
     <Content Include="Images\youtube.png" />
+=======
+    <Content Include="Images\ddamelio.jpg" />
+    <Content Include="Images\kwest.jpg" />
+    <Content Include="Images\spotify.png" />
+    <Content Include="Images\tswift.jpg" />
+>>>>>>> Stashed changes
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
