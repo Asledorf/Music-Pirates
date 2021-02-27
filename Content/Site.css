@@ -28,7 +28,7 @@
 
 h1 {
     /*colors*/
-    background-color: #7FB9BB;
+    background-color: #9FDBDD;
     color: #154B67;
     /*formatting*/
     height: 100px;
@@ -49,7 +49,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .nav ul li:hover {
-    background-color: #FCF7D8;
+    background-color: #9FDBDD;
     color: #784E1f;
 }
 
