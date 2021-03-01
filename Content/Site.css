@@ -28,7 +28,7 @@
 
 h1 {
     /*colors*/
-    background-color: #7FB9BB;
+    background-color: #9FDBDD;
     color: #154B67;
     /*formatting*/
     height: 100px;
@@ -39,7 +39,7 @@ h1 {
     font-family: Papyrus;
     font-weight: 900;
     /*border and shadow*/
-    border: 5px solid #154B67;
+    border: 5px double #154B67;
     box-shadow: 5px 5px 2px #C8B394;
 }
 
