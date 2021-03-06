@@ -87,12 +87,13 @@ namespace Music_Pirates.Controllers
                 return View();
             }
         }
-    }
 
-    // GET: User/Delete/5
-    public ActionResult Delete()
-        {
-            return View();
+        // GET: User/Delete/5
+        public ActionResult Delete()
+        { 
+            {
+                return View();
+            }
         }
 
         // POST: User/Delete/5
