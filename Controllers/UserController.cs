@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Music_Pirates.Models;
+using Music_Pirates.Models.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,12 +30,12 @@ namespace Music_Pirates.Controllers
 
         // POST: User/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(User user)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                UserRepo.Instance.AddUser(user);
                 return RedirectToAction("Index");
             }
             catch
@@ -65,19 +67,42 @@ namespace Music_Pirates.Controllers
         }
 
         // GET: User/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult SetActive()
         {
             return View();
         }
 
         // POST: User/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult SetActive(User user)
         {
             try
             {
                 // TODO: Add delete logic here
+                UserRepo.Instance.SetActive(user);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+    }
 
+    // GET: User/Delete/5
+    public ActionResult Delete()
+        {
+            return View();
+        }
+
+        // POST: User/Delete/5
+        [HttpPost]
+        public ActionResult Delete(User user)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                UserRepo.Instance.SetInActive(user);
                 return RedirectToAction("Index");
             }
             catch
