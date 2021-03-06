@@ -32,6 +32,60 @@ namespace Music_Pirates.Models.Users
 			return null;
 		}
 
+		public bool SetActive(User user)
+        {
+			try
+			{
+				using (var con = new SqlConnection(_connString))
+				{
+					// Set-up command
+					var cmd = new SqlCommand("SetUserToActive", con);
+					cmd.CommandType = CommandType.StoredProcedure;
+					// Define StoredProc parameters
+					cmd.Parameters.AddWithValue("@guidStr", user.ID.ToString());
+					// Open DB Connection
+					con.Open();
+					// Execute command
+					return cmd.ExecuteNonQuery() >= 1;
+				}
+			}
+			catch (Exception e)
+			{
+				System.Diagnostics.Debug.WriteLine("\n1 - \n" + e.StackTrace);
+				System.Diagnostics.Debug.WriteLine("\n2 - \n\t" + e.Message);
+				System.Diagnostics.Debug.WriteLine("\n3 - \n\t" + e.Source);
+				System.Diagnostics.Debug.WriteLine("\n4 - \n" + e.InnerException);
+				return false;
+			}
+		}
+
+		public bool SetInActive(User user)
+		{
+			try
+			{
+				using (var con = new SqlConnection(_connString))
+				{
+					// Set-up command
+					var cmd = new SqlCommand("SetUserToInactive", con);
+					cmd.CommandType = CommandType.StoredProcedure;
+					// Define StoredProc parameters
+					cmd.Parameters.AddWithValue("@guidStr", user.ID.ToString());
+					// Open DB Connection
+					con.Open();
+					// Execute command
+					return cmd.ExecuteNonQuery() >= 1;
+				}
+			}
+			catch (Exception e)
+			{
+				System.Diagnostics.Debug.WriteLine("\n1 - \n" + e.StackTrace);
+				System.Diagnostics.Debug.WriteLine("\n2 - \n\t" + e.Message);
+				System.Diagnostics.Debug.WriteLine("\n3 - \n\t" + e.Source);
+				System.Diagnostics.Debug.WriteLine("\n4 - \n" + e.InnerException);
+				return false;
+			}
+		}
+
 		public bool UpdateUser(User v)
 		{
 			return Instance.DeleteUser(v.ID) && Instance.AddUser(v);
