@@ -1,25 +1,81 @@
-﻿h1 {
+﻿html {
     /*colors*/
-    background-color: #7FB9BB;
+    background-color: #9FDBDD;
+    color: #3E301C;
+    /*formatting*/
+    font-family: Papyrus;
+}
+
+#playlist2 a:hover{
+    background-color: #AFECEE;
+    color: #2D200B;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.left {
+    width: 25%;
+    padding: 20px;
+}
+
+.right {
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1 {
+    /*colors*/
+    background-color: #9FDBDD;
     color: #154B67;
     /*formatting*/
     height: 100px;
-    width: 1100px;
+    width: auto;
+    padding-top: 30px;
+    text-align: center;
+    text-size-adjust: auto;
+    font-family: Papyrus;
+    font-weight: 900;
     /*border and shadow*/
-    border: 5px solid #154B67;
+    border: 5px double #154B67;
     box-shadow: 5px 5px 2px #C8B394;
+}
+
+h2, h3, h4, h5, h6 {
+    /*formatting*/
+    font-weight: 800;
+}
+
+.nav ul li:hover {
+    background-color: #FCF7D8;
+    color: #784E1f;
 }
 
 body {
     /*colors*/
     background-color: #EAD5B6;
-    color: #154B67;
+    color: #3E301C;
     /*formatting*/
     height: auto;
     width: auto;
     padding: 10px;
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: Papyrus;
+    font-weight: 700;
+}
+
+footer{
+    color: #3E301C;
+    font-family: 'Comic Sans MS';
+    font-weight: 100;
 }
 
 /* Set padding to keep content from hitting the edges */

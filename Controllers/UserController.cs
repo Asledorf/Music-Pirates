@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Music_Pirates.Models;
+using Music_Pirates.Models.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,15 +13,13 @@ namespace Music_Pirates.Controllers
         // GET: User
         public ActionResult Index()
         {
-            return View(Models.User.Users);
+            return View();
         }
 
         // GET: User/Details/5
-        public ActionResult Details(Guid id)
+        public ActionResult Details(int id)
         {
-            var selectedUser = Models.User.Users.Where(u => u.ID == id).FirstOrDefault();
-
-            return View(selectedUser);
+            return View();
         }
 
         // GET: User/Create
@@ -30,13 +30,12 @@ namespace Music_Pirates.Controllers
 
         // POST: User/Create
         [HttpPost]
-        public ActionResult Create(Models.User newUser)
+        public ActionResult Create(User user)
         {
             try
             {
                 // TODO: Add insert logic here
-                newUser.ID = Guid.NewGuid();
-
+                UserRepo.Instance.AddUser(user);
                 return RedirectToAction("Index");
             }
             catch
@@ -46,23 +45,18 @@ namespace Music_Pirates.Controllers
         }
 
         // GET: User/Edit/5
-        public ActionResult Edit(Guid id)
+        public ActionResult Edit(int id)
         {
-            var selectedUser = Models.User.Users.Where(u => u.ID == id).FirstOrDefault();
-
-            return View(selectedUser);
+            return View();
         }
 
         // POST: User/Edit/5
         [HttpPost]
-        public ActionResult Edit(Guid id, Models.User upUser)
+        public ActionResult Edit(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add update logic here
-                var oldUser = Models.User.Users.Where(s => s.ID == id).FirstOrDefault();
-                Models.User.Users.Remove(oldUser);
-                Models.User.Users.Add(upUser);
 
                 return RedirectToAction("Index");
             }
@@ -73,23 +67,43 @@ namespace Music_Pirates.Controllers
         }
 
         // GET: User/Delete/5
-        public ActionResult Delete(Guid id)
+        public ActionResult SetActive()
         {
-            var selectedUser = Models.User.Users.Where(u => u.ID == id).FirstOrDefault();
-
-            return View(selectedUser);
+            return View();
         }
 
         // POST: User/Delete/5
         [HttpPost]
-        public ActionResult Delete(Guid id, Models.User delUser)
+        public ActionResult SetActive(User user)
         {
             try
             {
                 // TODO: Add delete logic here
-                delUser = Models.User.Users.Where(s => s.ID == id).FirstOrDefault();
-                Models.User.Users.Remove(delUser);
+                UserRepo.Instance.SetActive(user);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
+        // GET: User/Delete/5
+        public ActionResult Delete()
+        { 
+            {
+                return View();
+            }
+        }
+
+        // POST: User/Delete/5
+        [HttpPost]
+        public ActionResult Delete(User user)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                UserRepo.Instance.SetInActive(user);
                 return RedirectToAction("Index");
             }
             catch

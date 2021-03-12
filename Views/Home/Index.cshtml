@@ -1,36 +1,97 @@
 ﻿@{
-    ViewBag.Title = "Profile";
+    ViewBag.Title = "Music Pirates";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<h1 style="background-color: #9FDBDD; border: 6px double">@ViewBag.Title</h1>
+<br />
+
+<h4 class="text-center" style="color:#3E301C;">
+    Yar Har, fiddle dee dee, I am a pirate with API keys, do what you want 'cause 
+    our software is free! We are pirates!!!
+</h4>
+<br />
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    <div class="column left" style="border-right: 2px dashed #3E301C; background-color: #EAD5B6;
+        height: 820px;">
+        <h3>What We Do</h3>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Music Pirates is a website where you can find the music you love without
+            having to subscribe to multiple streaming services just for one album.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>
+            When you want to listen to your favorite music, you should not have to
+            subscribe to or use multiple streaming platforms. That's why we made
+            <em>Music Pirates</em>. We will pull songs from your favorite artists
+            from Spotify, Youtube, and more. You can make playlists of all your
+            favorite kinds of music and also follow playlists that others have
+            made and the creators of those playlists. We hope to expand our website
+            to include more and more streaming platforms as we continue to work
+            on this website. <em>We steal the music so you don't have to! </em> ;)
+        </p>
+        <p>
+            This website was created by Salem Najera, Ben Stover, Brandon Rankin,
+            and Misha Finley for our Web-Based Software Projects class at Neumont
+            College of Computer Science. We are excited for the outcome of this
+            website and hope to continue working on this website and making it
+            better and better, even after our class has ended!
+        </p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+    <div class="column right" style="margin-left: 25px;">
+        <div style="background-color: #9FDBDD; color: #154B67; border: 2px solid #154B67;
+        box-shadow: 5px 5px 2px #C8B394; width: 850px;">
+            <h2 class="text-center"><b>Our Streaming Services</b></h2>
+            <div class="container" style="padding-left: 360px">
+                <h4>
+                    Spotify
+                    <img src="~/Images/spotify.png"
+                         height="70" width="70" />
+                </h4>
+            </div>
+            <div class="container" style="padding-left: 340px">
+                <h4>
+                    Youtube
+                    <img src="~/Images/youtube.png"
+                         height="55" width="100" />
+                </h4>
+            </div>
+            <div class="container" style="padding-left: 270px">
+                <h4>
+                    Hopefully Others
+                    <img src="https://thumbs-prod.si-cdn.com/9GxD2QUulahHmuRLIx23RZplD8I=/fit-in/1600x0/https://public-media.si-cdn.com/filer/79/eb/79ebd9da-3dba-4288-beb6-16383f0cc9b5/fingers_crossed.jpg"
+                         height="100" width="140" />
+                </h4>
+            </div>
+        </div>
+        <div style="background-color: #9FDBDD; color: #154B67; border: 2px solid #154B67;
+        box-shadow: 5px 5px 2px #C8B394; width: 850px; margin-top: 20px; padding: 20px;">
+            <h2>Our Newest Playlist by The Creators!</h2>
+            <img src="~/Images/instrumental.png"
+                 height="80" width="80" />
+            <h4 class="text-left">my fave instrumental music created by afirman02</h4>
+            <ol>
+                <li>
+                    Debussy - Claire De Lune by Martin Bloch
+                    <img src="~/Images/spotify.png" height="40" width="40" padding="0" />
+                </li>
+                <li>
+                    Fairy Fountain by Super Guitar Bros
+                    <img src="~/Images/spotify.png" height="40" width="40" padding="0" />
+                </li>
+                <li>
+                    Married Life (From "Up") [Piano Version] by The Wild Conductor
+                    <img src="~/Images/spotify.png" height="40" width="40" padding="0" />
+                </li>
+                <li>
+                    Once Upon a Dream by Invadable Harmony
+                    <img src="~/Images/spotify.png" height="40" width="40" padding="0" />
+                </li>
+                <li>
+                    The French Library by Franz Gordon
+                    <img src="~/Images/spotify.png" height="40" width="40" padding="0" />
+                </li>
+            </ol>
+        </div>
     </div>
 </div>
- 
-  
- 
-
-
